@@ -18,16 +18,16 @@
             <img src="https://scontent.fdad3-4.fna.fbcdn.net/v/t39.30808-6/333326080_8948777518531020_8271169159052432589_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=USEU4J-Jak8AX-J12Eo&_nc_ht=scontent.fdad3-4.fna&oh=00_AfDt1jOAnupKDcDcseJaHFULOorIBIz8d5hRWao-l9ZmJw&oe=64093609" alt="logo" id="logo">
             <ul>
                 <li>
-                    <a href="/index.html">Thêm số lần chat</a>
+                    <a id="a_add">Thêm số lần chat</a>
                 </li>
                 <li>
-                   <a href="/index2.html">Nhập dữ liệu</a> 
+                   <a id="a_set">Nhập dữ liệu</a> 
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <form action="">
+        <form action="" id="form_add">
             <h1 class="title">
                 Thêm Số Lần Chat
             </h1>
@@ -43,13 +43,37 @@
                 <input type="text" class="form-input" required>
                 <label for="form-input">Password Admin</label>
             </div>
-            <!-- <div class="notes">
-                <span>
-                    Chú ý: Trong training bot mỗi câu ( ý ) cần đào tạo cần cách nhau một  dấu “\”hoặc dấu “,”</br>
-                    Ví dụ: phone:0792709552\email: ngthnhvuong@gmail.com Hoặc phone: 0792709552,email: ngthnhvuong@gmail.com
-                </span>
-            </div> -->
             <button type="submit" value="" class="btn-submit">ADD</button>
+        </form>
+        <form action="" id="form_set">
+            <h1 class="title">
+                Import Data
+            </h1>
+            <div class="form-group">
+                <input type="text" class="form-input" required>
+                <label for="form-input">OpenAI Organization</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input" required>
+                <label for="form-input">OpenAI API KEY</label>
+            </div>
+            <div class="form-group">
+                <textarea name="" id="" cols="28" rows="6" required>
+                </textarea>
+                <label for="form-input">OpenAI Training Data</label>
+                <div class="notes">
+                    <span>
+                        Chú ý: Trong training bot mỗi câu ( ý ) cần đào tạo cần cách nhau một  dấu “\”hoặc dấu “,”</br>
+                        Ví dụ: phone:0792709552\email: ngthnhvuong@gmail.com Hoặc phone: 0792709552,email: ngthnhvuong@gmail.com
+                    </span>
+                </div>
+            </div>
+            <hr>
+            <div class="form-group">
+                <input type="text" class="form-input" required>
+                <label for="form-input">Password Admin</label>
+            </div>
+            <button type="submit" value="" class="btn-submit">SET</button>
         </form>
     </main>
 </body>
@@ -57,6 +81,19 @@
     const logo = document.getElementById('logo');
     logo.onclick =()=>{
         window.open('https://www.facebook.com/ngthnh.vuong','_blank');
+    }
+    const a_add = document.getElementById('a_add');
+    const a_set = document.getElementById('a_set');
+    const form_add = document.getElementById('form_add');
+    const form_set = document.getElementById('form_set');
+    a_add.onclick = (e)=>{
+        e.preventDefault();
+        form_add.style.display= 'block';
+        form_set.style.display = 'none';    }
+    a_set.onclick = (e)=>{
+        e.preventDefault();
+        form_set.style.display = 'block';
+        form_add.style.display = 'none';
     }
 </script>
 </html>
