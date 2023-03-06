@@ -52,6 +52,10 @@
         header nav ul :hover {
           background-color: #472183; }
 
+  main #form_set {
+    display: none; }
+  main #form_add {
+    display: block; }
   main form {
     position: relative;
     margin-top: 10%;
