@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Genos:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+@media screen and (min-width: 769px) {
+  header {
+    display: none; }
+
+  main {
+    display: none; }
+
+  .notify-display {
+    display: block;
+    color: #472183;
+    font-family: "Genos", sans-serif;
+    text-align: center; } }
+@media screen and (max-width: 768px) {
+  .notify-display {
+    display: none; }
+
+  body {
+    background-color: #472183;
+    height: 100%; }
+
+  header {
+    background-color: #9feedb; }
+    header nav {
+      display: flex;
+      justify-content: space-around;
+      justify-items: center;
+      padding: 5px 0 5px 0; }
+      header nav img {
+        width: 50px;
+        border-radius: 50%;
+        cursor: pointer; }
+      header nav ul {
+        display: flex; }
+        header nav ul li {
+          list-style: none;
+          background-color: #4B56D2;
+          border-radius: 5px;
+          padding: 6px 8px;
+          margin-left: 20px;
+          width: auto;
+          height: 20px;
+          margin-top: 10px; }
+          header nav ul li a {
+            text-decoration: none;
+            color: #9feedb;
+            font-family: "Genos", sans-serif; }
+        header nav ul :hover {
+          background-color: #472183; }
+
+  main form {
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border: 2px #0559e0 solid;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 30px;
+    padding-bottom: 50px; }
+    main form h1 {
+      font-family: "Genos", sans-serif;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #82C3EC; }
+    main form .form-group {
+      position: relative;
+      margin-bottom: 12px; }
+      main form .form-group input {
+        height: 40px;
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        border-color: #82C3EC;
+        color: #472183;
+        font-family: "Genos", sans-serif;
+        font-size: 25px; }
+      main form .form-group textarea {
+        height: auto;
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        border-color: #82C3EC;
+        color: #472183;
+        font-family: "Genos", sans-serif;
+        font-size: 25px; }
+      main form .form-group label {
+        position: absolute;
+        top: 8px;
+        left: 25px;
+        pointer-events: none;
+        font-family: "Genos", sans-serif;
+        color: #4B56D2;
+        transition: all 0.3s ease-in-out;
+        font-size: 20px; }
+      main form .form-group .notes {
+        padding: 0 20px; }
+        main form .form-group .notes span {
+          font-family: "Genos", sans-serif;
+          font-size: 15px;
+          color: #9feedb; }
+    main form .btn-submit {
+      position: absolute;
+      background-color: #472183;
+      border: 2px blueviolet solid;
+      border-radius: 20px;
+      color: #82C3EC;
+      font-family: "Genos", sans-serif;
+      width: 80px;
+      height: 35px;
+      right: calc(calc(100% - 80px) / 2);
+      border-radius: 4px;
+      bottom: 17px; }
+    main form hr {
+      margin: 10px 0 20px 0; }
+
+  .form-group input:hover + label,
+  .form-group input:valid + label {
+    font-size: 17px;
+    top: -19px;
+    left: 20px;
+    color: #82C3EC; }
+
+  .form-group textarea:hover + label,
+  .form-group textarea:valid + label {
+    font-size: 17px;
+    top: -19px;
+    left: 20px;
+    color: #82C3EC; } }
+
+/*# sourceMappingURL=style.css.map */
